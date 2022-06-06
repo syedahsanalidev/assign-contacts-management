@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table rtl my-3 table-bordered">
+    <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Address</th>
+      <th>Age</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let contacts of contactsList" (click)="getContactById(contacts.id)">
+      <td>{{ contacts.firstName }}</td>
+      <td>{{ contacts.lastName }}</td>
+      <td>{{ contacts.address }}</td>
+      <td>{{ contacts.age }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
