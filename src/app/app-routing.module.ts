@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: 'contacts',
     component: ContactsComponent,
-    children: [],
+    children: [{ path: 'contacts/:id', component: ContactDetailsComponent },],
   },
   {
     path: 'contacts/:id',

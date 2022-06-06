@@ -27,11 +27,22 @@ export class ContactDetailsComponent implements OnInit {
   }
 
   getContactById(resolve: any) {
-    this.route.params.subscribe(async param => {
-      this.ContactsService.getContactById(param['id']).subscribe(data => {
-        this.contactsById = data;
-        resolve(this.contactsById)
-      })
-    });
+    debugger
+
+    if (this.route.snapshot.params['id']) {
+      this.route.params.subscribe(async param => {
+        this.ContactsService.getContactById(param['id']).subscribe(data => {
+          this.contactsById = data;
+          resolve(this.contactsById)
+        })
+      });
+    } else {
+        this.ContactsService.getContactById(1).subscribe(data => {
+
+          this.contactsById = data;
+          resolve(this.contactsById)
+
+        });
+    }
   }
 }

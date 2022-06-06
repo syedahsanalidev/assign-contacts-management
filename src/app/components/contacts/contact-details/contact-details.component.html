@@ -1,18 +1,66 @@
-<div class="container">
-  <table class="table rtl my-3 table-bordered">
-    <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngIf="contactsById">
-      <td>{{ contactsById.firstName }}</td>
-      <td>{{ contactsById.lastName }}</td>
-      <td>{{ contactsById.email.length ? contactsById.email : "N/A" }}</td>
-    </tr>
-    </tbody>
-  </table>
+<!-- container-Right -->
+<div class="right-main" >
+  <div class="card-container">
+    <div class="cricle-image">
+      <img src="../../../../assets/contacts/johanna.svg" height=100% width=100% alt="image"/>
+    </div>
+    <div class="direction">
+      <div class="person-name">J{{ contactsById && contactsById.firstName ? contactsById.firstName : contactsById[0].firstName }}</div>
+      <div class="person-title">{{ contactsById.lastName }}</div>
+      <div class="chat-icon">
+        <div class="message-main"><img src="../../../../assets/contacts/white.svg" alt="image"/>
+          <span class="message-text">Message</span>
+        </div>
+        <div class="icon-meesage round-circle"><img src="../../../../assets/contacts/call.svg" alt="image"/>
+        </div>
+        <div class="icon-call round-circle"><img src="../../../../assets/contacts/upload.svg" alt="image"/>
+        </div>
+        <div class="icon-dots round-circle"><img src="../../../../assets/contacts/dots.svg" alt="image"/></div>
+      </div>
+    </div>
+  </div>
+  <div class="item-detail">
+    <div class="bio-main">
+      <h5>Bio</h5>
+      <p>When I first got into the advertising, I was looking for the magical combination that would put website into
+        the top search engine rankings</p>
+    </div>
+    <div class="email-main">
+      <h5>Email</h5>
+      <div class="email-content">
+        {{ contactsById.email.length ? contactsById.email : "N/A" }}
+      </div>
+      <div class="email-btn">
+        Primary
+      </div>
+    </div>
+    <div class="dial-main">
+      <h5>Gender</h5>
+      <p>{{ contactsById.gender}}</p>
+    </div>
+    <div class="meeting-main">
+      <h5>Meeting</h5>
+      <p>{{ contactsById.address}}</p>
+    </div>
+
+    <div class="email-main">
+      <h5>Phone</h5>
+      <div class="email-content">
+        <p>{{ contactsById.phone }}</p>
+      </div>
+      <div class="email-btn">
+        Primary
+      </div>
+    </div>
+    <div class="social-main">
+      <h5>Social</h5>
+      <div class="icons-main">
+        <div class="circle-btn"><img src="../../../../assets/contacts/fb.svg" alt="image"/></div>
+        <div class="circle-btn"><img src="../../../../assets/contacts/pin.svg" alt="image"/></div>
+        <div class="circle-btn"><img src="../../../../assets/contacts/tw.svg" alt="image"/></div>
+        <div class="circle-btn"><img src="../../../../assets/contacts/ln.svg" alt="image"/></div>
+        <div class="circle-btn"><img src="../../../../assets/contacts/g.svg" alt="image"/></div>
+      </div>
+    </div>
+  </div>
 </div>

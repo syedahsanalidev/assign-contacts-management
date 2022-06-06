@@ -1,20 +1,36 @@
-<div class="container">
-  <table class="table rtl my-3 table-bordered">
-    <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Address</th>
-      <th>Age</th>
-    </tr>
-    </thead>
-    <tbody *ngIf="contactsList">
-    <tr *ngFor="let contacts of contactsList" (click)="getContactById(contacts.id)">
-      <td>{{ contacts.firstName }}</td>
-      <td>{{ contacts.lastName }}</td>
-      <td>{{ contacts.address }}</td>
-      <td>{{ contacts.age }}</td>
-    </tr>
-    </tbody>
-  </table>
+<!-- container-Left -->
+<div class="container-left">
+  <div class="header-main">
+    <div class="circle-btn sidebar-btn"><img src="../../../assets/../assets/contacts/sidebar.svg" alt="image"/>
+    </div>
+    <div class="contact-h1">Contacts</div>
+    <div class="icon-left circle-btn"><img src="../../../assets/../assets/contacts/left.svg" alt="image"/></div>
+    <div class="icon-right circle-btn"><img src="../../../assets/../assets/contacts/right.svg" alt="image"/></div>
+  </div>
+  <div class="inner-container">
+    <div class="bg-line"> &nbsp;</div>
+    <div class="search-contact">Search for a contact</div>
+    <div class="name-search">
+      <div class="name-email">Name, email or phone number</div>
+      <div class="searcn-icon"><img src="../../../assets/../assets/contacts/search.svg" alt="image"/></div>
+    </div>
+    <div class="card-main" *ngFor="let contacts of contactsList" (click)="getContactById(contacts.id)">
+      <div class="cricle-img">
+        <img src="../../../assets/../assets/contacts/bradley.svg" alt="image"/>
+        <span class="status-active">&nbsp;</span>
+      </div>
+      <div class="direction-text">
+        <div class="contact-name">{{ contacts.firstName }}</div>
+        <div class="contact-title">{{ contacts.lastName }}</div>
+      </div>
+
+      <div class="chat-icon">
+        <div class="icon-meesage circle-round"><img src="../../../assets/../assets/contacts/message.svg" alt="image"/>
+        </div>
+        <div class="icon-call circle-round"><img src="../../../assets/../assets/contacts/call.svg" alt="image"/></div>
+        <div class="icon-dots circle-round"><img src="../../../assets/../assets/contacts/dots.svg" alt="image"/></div>
+      </div>
+    </div>
+  </div>
 </div>
+
