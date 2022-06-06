@@ -29,7 +29,6 @@ export class ContactDetailsComponent implements OnInit {
   getContactById(resolve: any) {
     this.route.params.subscribe(async param => {
       this.ContactsService.getContactById(param['id']).subscribe(data => {
-        console.log(data)
         this.contactsById = data;
         resolve(this.contactsById)
       })

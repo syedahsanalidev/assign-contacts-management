@@ -13,6 +13,7 @@ export class ContactsService {
   constructor(private http: HttpClient) {
   }
 
+  // Get all the contacts from mockapi
   public getAllContacts() {
     return this.http.get(`${this.uri}`)
       .pipe(
@@ -22,6 +23,7 @@ export class ContactsService {
       )
   }
 
+  // Get the contact by id from mockapi
   public getContactById(contactId: number) {
     return this.http.get(`${this.uri}/${contactId}`)
       .pipe(

@@ -8,7 +8,7 @@
       <th>Age</th>
     </tr>
     </thead>
-    <tbody>
+    <tbody *ngIf="contactsList">
     <tr *ngFor="let contacts of contactsList" (click)="getContactById(contacts.id)">
       <td>{{ contacts.firstName }}</td>
       <td>{{ contacts.lastName }}</td>
