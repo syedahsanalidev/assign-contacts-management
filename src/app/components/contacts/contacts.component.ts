@@ -26,7 +26,7 @@ export class ContactsComponent implements OnInit {
     try {
       this.ContactsService.getAllContacts().subscribe(res => {
         this.contactsList = res;
-        this.router.navigate([`/contacts/${1}`], { relativeTo: this.route });
+        this.router.navigate([`/contacts/${1}/email_addresses`], { relativeTo: this.route });
       });
     } catch (error) {
       console.log(error);
@@ -34,7 +34,7 @@ export class ContactsComponent implements OnInit {
   }
 
   getContactById(id: any) {
-    this.router.navigate([`/contacts/${id}`], { relativeTo: this.route });
+    this.router.navigate([`/contacts/${id}/email_addresses`], { relativeTo: this.route });
 
   }
 
